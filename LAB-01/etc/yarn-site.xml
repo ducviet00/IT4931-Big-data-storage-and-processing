@@ -1,0 +1,42 @@
+<configuration>
+    <!-- How much memory can be allocated for YARN containers on a single node -->
+    <property>
+            <name>yarn.nodemanager.resource.memory-mb</name>
+            <value>768</value>
+    </property>
+    <!-- How much memory a single container can consume and the minimum memory allocation allowed -->
+    <property>
+            <name>yarn.scheduler.maximum-allocation-mb</name>
+            <value>896</value>
+    </property>
+
+    <property>
+            <name>yarn.scheduler.minimum-allocation-mb</name>
+            <value>64</value>
+    </property>
+
+    <property>
+            <name>yarn.nodemanager.vmem-check-enabled</name>
+            <value>false</value>
+    </property>
+
+    <property>
+            <name>yarn.acl.enable</name>
+            <value>0</value>
+    </property>
+
+    <property>
+            <name>yarn.resourcemanager.hostname</name>
+            <value>188.166.213.111</value>
+    </property>
+
+    <property>
+            <name>yarn.nodemanager.aux-services</name>
+            <value>mapreduce_shuffle</value>
+    </property>
+    
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
+</configuration>
