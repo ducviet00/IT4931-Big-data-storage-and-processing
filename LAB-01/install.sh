@@ -1,6 +1,7 @@
 # Install java
 sudo apt update
 sudo apt install default-jdk
+sudo cp hosts /etc/
 wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
 tar -xzvf hadoop-3.3.1.tar.gz
 sudo mv hadoop-3.3.1 /usr/local/hadoop
