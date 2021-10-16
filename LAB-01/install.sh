@@ -10,7 +10,6 @@ echo 'export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")' >> /us
 echo 'PATH=/usr/local/hadoop/bin:/usr/local/hadoop/sbin:$PATH' >> ~/.profile
 echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.bashrc
 echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.bashrc
-source ~/.bashrc
 echo 'HADOOP VERSION'
 /usr/local/hadoop/bin/hadoop version
 
