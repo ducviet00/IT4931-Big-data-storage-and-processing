@@ -7,15 +7,16 @@ wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
 tar -xzvf hadoop-3.3.1.tar.gz
 sudo mv hadoop-3.3.1 /usr/local/hadoop
 echo 'export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
-echo 'export HDFS_NAMENODE_USER="root"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
-echo 'export HDFS_DATANODE_USER="root"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
-echo 'export HDFS_SECONDARYNAMENODE_USER="root"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
-echo 'export YARN_RESOURCEMANAGER_USER="root"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
-echo 'export YARN_NODEMANAGER_USER="root"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+echo 'export HDFS_NAMENODE_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+echo 'export HDFS_DATANODE_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+echo 'export HDFS_SECONDARYNAMENODE_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+echo 'export YARN_RESOURCEMANAGER_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+echo 'export YARN_NODEMANAGER_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
 source /usr/local/hadoop/etc/hadoop/hadoop-env.sh
 echo 'PATH=/usr/local/hadoop/bin:/usr/local/hadoop/sbin:$PATH' >> ~/.profile
-echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.bashrc
-echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.bashrc
+echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.zshrc
+echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.zshrc
+source ~/.zshrc
 echo 'HADOOP VERSION'
 /usr/local/hadoop/bin/hadoop version
 
