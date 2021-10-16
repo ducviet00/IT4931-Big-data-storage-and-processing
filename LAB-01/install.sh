@@ -9,8 +9,8 @@ sudo mv hadoop-3.3.1 /usr/local/hadoop
 echo 'export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
 echo 'PATH=/usr/local/hadoop/bin:/usr/local/hadoop/sbin:$PATH' >> ~/.profile
 echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.bashrc
-echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.zshrc
-source ~/.zshrc
+echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.bashrc
+source ~/.bashrc
 echo 'HADOOP VERSION'
 /usr/local/hadoop/bin/hadoop version
 
