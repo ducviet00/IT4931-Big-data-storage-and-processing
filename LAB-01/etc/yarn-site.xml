@@ -22,7 +22,7 @@
     
     <property>
             <name>yarn.nodemanager.resource.cpu-vcores</name>
-            <value>1</value>
+            <value>2</value>
     </property>
 
     <property>
@@ -37,7 +37,7 @@
 
     <property>
             <name>yarn.resourcemanager.hostname</name>
-            <value>10.104.0.2</value>
+            <value>157.245.53.197</value>
     </property>
 
     <property>
