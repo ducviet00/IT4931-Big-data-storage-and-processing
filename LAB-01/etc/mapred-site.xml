@@ -2,17 +2,17 @@
     <!-- How much memory will be allocated to the ApplicationMaster. -->
     <property>
         <name>yarn.app.mapreduce.am.resource.mb</name>
-        <value>256</value>
+        <value>512</value>
     </property>
     <!-- How much memory will be allocated to each map or reduce operation -->
     <property>
             <name>mapreduce.map.memory.mb</name>
-            <value>128</value>
+            <value>512</value>
     </property>
 
     <property>
             <name>mapreduce.reduce.memory.mb</name>
-            <value>128</value>
+            <value>512</value>
     </property>
 
     <property>
