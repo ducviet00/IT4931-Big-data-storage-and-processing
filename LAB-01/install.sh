@@ -14,9 +14,9 @@ echo 'export YARN_RESOURCEMANAGER_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop
 echo 'export YARN_NODEMANAGER_USER="hadoop"' >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
 source /usr/local/hadoop/etc/hadoop/hadoop-env.sh
 echo 'PATH=/usr/local/hadoop/bin:/usr/local/hadoop/sbin:$PATH' >> ~/.profile
-echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.zshrc
-echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.zshrc
-source ~/.zshrc
+echo 'export HADOOP_HOME=/usr/local/hadoop' >> ~/.bashrc
+echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${HADOOP_HOME}/sbin' >> ~/.bashrc
+source ~/.bashrc
 echo 'HADOOP VERSION'
 /usr/local/hadoop/bin/hadoop version
 
