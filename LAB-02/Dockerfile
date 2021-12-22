@@ -46,3 +46,4 @@ RUN /usr/local/hadoop/bin/hdfs namenode -format
 
 CMD [ "sh", "-c", "service ssh start; bash"]
 
+ENTRYPOINT ["/bin/bash"]

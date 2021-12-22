@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  hadoop-master:
+    build: .
+    ports:
+      - '9870:9870'
+      - '8088:8088'
+      - '8899:8888'
+    command: [ "sh", "-c", "service ssh start; bash"]
+  hadoop-worker1:
+    build: .
+    command: [ "sh", "-c", "service ssh start; bash"]
+  hadoop-worker2:
+    build: .
+    command: [ "sh", "-c", "service ssh start; bash"]
+    
+networks:
+  default:
+    external: true
+    name: hadoop

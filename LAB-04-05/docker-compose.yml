@@ -1,6 +1,14 @@
 version: '2'
 
 services:
+  # client:
+  #   image: alpine
+  #   command:
+  #     - sh
+  #     - -c
+  #     - sleep 100000000000
+  #   ports:
+  #     - 7777:7777 
   spark:
     image: docker.io/bitnami/spark:3
     environment:
@@ -14,7 +22,6 @@ services:
     ports:
       - '8080:8080'
       - '7077:7077'
-      - '12345:12345'
   spark-worker:
     image: docker.io/bitnami/spark:3
     environment:
